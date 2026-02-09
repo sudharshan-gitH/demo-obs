@@ -18,9 +18,6 @@ data:
       prometheus:
         endpoint: "0.0.0.0:8889"
 
-      loki:
-        endpoint: http://loki.observability:3100/loki/api/v1/push
-
       otlp:
         endpoint: tempo.observability:4317
         tls:
@@ -33,13 +30,7 @@ data:
           processors: [batch]
           exporters: [prometheus]
 
-        logs:
-          receivers: [otlp]
-          processors: [batch]
-          exporters: [loki]
-
         traces:
           receivers: [otlp]
           processors: [batch]
           exporters: [otlp]
-
