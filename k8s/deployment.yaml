@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-app
+  name: demo-obs-app
   namespace: demo-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: demo-app
+      app: demo-obs-app
   template:
     metadata:
       labels:
-        app: demo-app
+        app: demo-obs-app
     spec:
       containers:
-      - name: demo-app
-        image: gcr.io/lexical-cider-482012-i7/demo-app:latest
+      - name: demo-obs-app
+        image: gcr.io/lexical-cider-482012-i7/demo-obs-app:latest
         ports:
         - containerPort: 8080
