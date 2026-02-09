@@ -54,8 +54,3 @@ jobs:
           sed -i "s|IMAGE_PLACEHOLDER|$IMAGE|g" k8s/deployment.yaml
           kubectl apply -f k8s/deployment.yaml
           kubectl apply -f k8s/service.yaml
-
-    - name: Deploy to GKE
-      run: |
-        sed -i "s/PROJECT_ID/$PROJECT_ID/g" k8s/deployment.yaml
-        kubectl apply -f k8s/
