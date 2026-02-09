@@ -42,9 +42,7 @@ jobs:
 
     - name: Get GKE credentials
       run: |
-          gcloud container clusters get-credentials obs-cluster \
-          --zone us-central1-a \
-          --project lexical-cider-482012-i7
+          gcloud container clusters get-credentials obs-cluster --zone us-central1 --project lexical-cider-482012-i7
 
     - name: Deploy to GKE
       run: |
