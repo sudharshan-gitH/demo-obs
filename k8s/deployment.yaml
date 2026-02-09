@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: demo-obs-app
-        image: gcr.io/lexical-cider-482012-i7/demo-obs-app:latest
+        image: IMAGE_PLACEHOLDER
         ports:
         - containerPort: 8080
