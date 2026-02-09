@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: gcr.io/PROJECT_ID/demo-app:latest
+        image: gcr.io/lexical-cider-482012-i7/demo-app:latest
         ports:
         - containerPort: 8080
